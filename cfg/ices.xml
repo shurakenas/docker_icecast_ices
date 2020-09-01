@@ -1,0 +1,36 @@
+<?xml version="1.0"?> 
+<ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices"> 
+  <Playlist> 
+    <File>/mnt/stream/playlist.txt</File> 
+    <Randomize>1</Randomize> 
+    <Type>builtin</Type> 
+    <Module>ices</Module> 
+  </Playlist> 
+
+  <Execution> 
+    <Background>0</Background> 
+    <Verbose>1</Verbose> 
+    <BaseDirectory>/tmp</BaseDirectory> 
+  </Execution> 
+
+  <Stream> 
+    <Server> 
+      <Hostname>localhost</Hostname> 
+      <Port>8000</Port> 
+      <Password>hackme</Password> 
+      <Protocol>http</Protocol> 
+    </Server> 
+
+<Mountpoint>/my</Mountpoint>
+    <Name>My radio</Name> 
+    <Genre>other</Genre> 
+    <Description>Default description</Description> 
+    <URL>http://localhost:8000/my</URL> 
+    <Public>1</Public> 
+
+    <Bitrate>256</Bitrate> 
+    <Reencode>1</Reencode> 
+    <Samplerate>44100</Samplerate> 
+    <Channels>2</Channels> 
+  </Stream> 
+</ices:Configuration>
